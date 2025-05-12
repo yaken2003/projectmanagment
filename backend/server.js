@@ -6,7 +6,15 @@ const cors = require('cors');
 const app = express();
 const db = require('./models/db');
 
+// Enable CORS for specific origin (for example, your frontend URL)
+const corsOptions = {
+  origin: 'https://projectmanagment-ten.vercel.app', // allow requests from this origin
+  methods: ['GET', 'POST'], // allowed HTTP methods
+  allowedHeaders: ['Content-Type'], // allowed headers
+};
 
+// Use CORS middleware with the specified options
+app.use(cors(corsOptions));
 
 // Enable CORS
 app.use(cors());
