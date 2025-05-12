@@ -63,7 +63,7 @@
         });
 
         function fetchNotifications(email) {
-            fetch(`https://project-management-255c.vercel.app/api/notifications/${email}`)
+            fetch(`https://projectmanagment-kappa.vercel.app/api/notifications/${email}`)
                 .then(response => response.json())
                 .then(notifications => {
                     const notificationsList = document.getElementById('notificationsList');

@@ -17,7 +17,7 @@ return;
 }
 
 try {
-const response = await fetch(`https://project-management-255c.vercel.app/api/projects/${projectId}/collaborators`, {
+const response = await fetch(`https://projectmanagment-kappa.vercel.app/api/projects/${projectId}/collaborators`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ async function fetchProjects() {
     const email = localStorage.getItem("email");
     const password = localStorage.getItem("password");
 
-    const response = await fetch("https://project-management-255c.vercel.app/api/projectsDisplay/userfromprojects", {
+    const response = await fetch("https://projectmanagment-kappa.vercel.app/api/projectsDisplay/userfromprojects", {
         method: "GET",
         headers: {
         
@@ -115,7 +115,7 @@ async function fetchProjects() {
 
 
     for (const project of projects) {
-        const taskSummaryResponse = await fetch(`https://project-management-255c.vercel.app/api/getCompletedTasksOfOneProject/${project._id}`, {
+        const taskSummaryResponse = await fetch(`https://projectmanagment-kappa.vercel.app/api/getCompletedTasksOfOneProject/${project._id}`, {
             method: "GET",
             headers: {
                 email: email,
@@ -176,7 +176,7 @@ async function fetchAllProjects() {
     const email = localStorage.getItem("email");
     const password = localStorage.getItem("password");
 
-    const response = await fetch("https://project-management-255c.vercel.app/api/projectsDisplay/userfromprojects", {
+    const response = await fetch("https://projectmanagment-kappa.vercel.app/api/projectsDisplay/userfromprojects", {
         method: "GET",
         headers: {
         
@@ -209,7 +209,7 @@ async function fetchCollaborationProjects() {
     const email = localStorage.getItem("email");
     const password = localStorage.getItem("password");
 
-    const response = await fetch("https://project-management-255c.vercel.app/api/projectsDisplay/userfromprojects", {
+    const response = await fetch("https://projectmanagment-kappa.vercel.app/api/projectsDisplay/userfromprojects", {
         method: "GET",
         headers: {
         
@@ -248,7 +248,7 @@ const reportContainer = document.getElementById('reportContent');
 reportContainer.innerHTML = "<p>Generating report...</p>";
 
 try {
-const response = await fetch(`https://project-management-255c.vercel.app/api/reports/project/${projectId}`, {
+const response = await fetch(`https://projectmanagment-kappa.vercel.app/api/reports/project/${projectId}`, {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
@@ -298,7 +298,7 @@ async function addProject() {
         return;
     }
 
-    await fetch("https://project-management-255c.vercel.app/api/projects", {
+    await fetch("https://projectmanagment-kappa.vercel.app/api/projects", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -317,7 +317,7 @@ async function fetchUserProjects() {
     const email = localStorage.getItem("email");
     const password = localStorage.getItem("password");
 
-    const response = await fetch("https://project-management-255c.vercel.app/api/projects/user-projects", {
+    const response = await fetch("https://projectmanagment-kappa.vercel.app/api/projects/user-projects", {
         method: "GET",
         headers: {
             "userId": userId,
@@ -337,7 +337,7 @@ const email = localStorage.getItem("email");
 const password = localStorage.getItem("password");
 
 try {
-const response = await fetch(`https://project-management-255c.vercel.app/api/projects/${id}`, {
+const response = await fetch(`https://projectmanagment-kappa.vercel.app/api/projects/${id}`, {
     method: "DELETE",
     headers: {
         email: email,

@@ -88,7 +88,7 @@
     });
 
     function fetchNotifications(email) {
-      fetch(`https://project-management-255c.vercel.app/api/notifications/${email}`)
+      fetch(`https://projectmanagment-kappa.vercel.app/api/notifications/${email}`)
         .then(response => response.json())
         .then(notifications => {
           const notificationsList = document.getElementById('notificationsList');
@@ -105,7 +105,7 @@
     }
 
     function fetchUserData(email) {
-      fetch(`https://project-management-255c.vercel.app/api/users/getUserByEmail/${email}`)
+      fetch(`https://projectmanagment-kappa.vercel.app/api/users/getUserByEmail/${email}`)
         .then(response => response.json())
         .then(userData => {
           console.log(userData);
@@ -130,7 +130,7 @@
     }
 
     function fetchUserRank(userId) {
-  fetch(`https://project-management-255c.vercel.app/api/users/rank/${userId}`)
+  fetch(`https://projectmanagment-kappa.vercel.app/api/users/rank/${userId}`)
     .then(response => response.json())
     .then(data => {
       const { rank } = data;
